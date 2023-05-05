@@ -28,13 +28,15 @@
                                         <picture><img class="img-thumbnail" src="<?= base_url('gambar/' . $item['gambar'] . '') ?>" style="max-height: 144px;max-width: 100px;"></picture>
                                     </td>
                                     <td><strong><span style="color: inherit;"><?= $item['name'] ?>&nbsp;</span></strong></td>
-                                    <td><strong><span style="color: inherit;"><?php echo number_format($item['price'] - ($item['price'] * $item['diskon'] / 100), 0, ',', '.') ?>&nbsp;</span></strong></td>
+                                    <td><strong><span style="color: inherit;"><?php echo number_format(((int)$item['price'] - ((int)$item['price'] * (int)$item['diskon'] / 100)), 0, ',', '.') ?>&nbsp;</span></strong></td>
                                     <td class="text-start" colspan="1">
-                                        <button onclick="update_qty_cart(<?= $item['id']  ?>, 'decrement')" class="btn btn-outline-primary btn-sm fs-2 fw-semibold border rounded-pill" type="button" style="margin-right: 10px;">-</button>
-                                        <span id="qty_produk_<?= $item['id'] ?>"><?= $item['qty'] ?></span>
-                                        <button onclick="update_qty_cart(<?= $item['id']  ?>, 'increment')" class="btn btn-outline-primary btn-sm fs-4 fw-semibold border rounded-pill" type="button" style="margin-left: 10px;">+</button>&nbsp;
+                                        <form action="update_qty_cart" method="post">
+                                            <input type="hidden" name="id" value="<?= $item['id'] ?>">
+                                            <input type="number" name="qty" value="<?= $item['qty'] ?>">
+
+                                        </form>
                                     </td>
-                                    <td><span style="color: inherit;"><?php echo number_format($item['price'] * $item['qty']) ?></span></td>
+                                    <td><span style="color: inherit;"><?php echo number_format(((int)$item['price'] - ((int)$item['price'] * (int)$item['diskon'] / 100)) * (int)$item['qty']) ?></span></td>
                                     <td>
                                         <form action="<?= base_url('delete_product_in_cart') ?>" method="post" id="form-delete-product-in-cart">
                                             <input type="hidden" name="id" value="<?= $item['id'] ?>">
@@ -55,7 +57,7 @@
         <div class="mt-5 col-md-8">
             <?php if (session()->has('cart')) { ?>
                 <div class="card border rounded shadow p-4">
-                    <form action="<?= base_url('checkout') ?>" method="POST">
+                    <form action="<?= base_url('checkout') ?>" method="POST" enctype="multipart/form-data">
                         <div class="row g-3">
 
                             <!-- alert error checkout -->
@@ -109,7 +111,7 @@
                                             foreach (session('cart') as $item) : ?>
                                                 <tr>
                                                     <td><?= $item['name'] ?></td>
-                                                    <td>Rp<?= number_format($item['price'] * $item['qty'], 0, ',', '.') ?>,00,-</td>
+                                                    <td>Rp<?= number_format(((int)$item['price'] - ((int)$item['price'] * (int)$item['diskon'] / 100)) * (int)$item['qty'], 0, ',', '.') ?>,00,-</td>
                                                     <td><?= $item['qty'] ?> x</td>
                                                 </tr>
                                             <?php endforeach; ?>
@@ -131,7 +133,7 @@
                                         $total = 0;
                                         if (session()->has('cart')) {
                                             foreach (session('cart') as $item) {
-                                                $total += $item['price'] * $item['qty'];
+                                                $total += ($item['price'] - ($item['price'] * $item['diskon'] / 100))  * $item['qty'];
                                             }
                                         }
                                         ?>
@@ -225,4 +227,31 @@
         });
 
     }
+
+    $(document).ready(function() {
+        $('.btn-kurang, .btn-tambah').on('click', function() {
+            var id = $(this).data('id');
+            var action = $(this).data('action');
+
+            $.ajax({
+                url: '<?= base_url('keranjang/ubah/') ?>',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    id: id,
+                    action: action,
+                },
+                success: function(response) {
+                    // Update tampilan jumlah dan total harga
+                    $('input[name="jumlah"][data-id="' + id + '"]').val(response.jumlah);
+                    $('#subtotal-harga-' + id).html('Rp' + response.subtotal);
+                    $('#total-harga').text(response.total);
+                },
+                error: function(xhr, status, error) {
+                    // Tampilkan pesan error
+                    alert('Terjadi kesalahan: ' + error);
+                }
+            });
+        });
+    });
 </script>

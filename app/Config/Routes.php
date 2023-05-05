@@ -31,6 +31,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'C_Auth::login');
 $routes->get('/cart', 'C_Home::cart');
+$routes->get('/checkout', 'C_Transaksi::checkout');
 
 
 $routes->post('/add_to_cart', 'C_Transaksi::add_to_cart');
@@ -43,11 +44,13 @@ $routes->post('/auth/valid_login', 'C_Auth::valid_login');
 $routes->get('/admin/dashboard', 'C_Admin::index');
 $routes->resource('admin/barang', ['controller' => 'C_Barang']);
 $routes->get('/api/barang/(:num)', 'C_Barang::getBarang');
+$routes->get('/api/barang', 'C_Barang::getBarang');
 $routes->get('/product', 'C_Home::index');
 $routes->get('/auth/logout', 'C_Auth::logout');
 $routes->get('/auth/login', 'C_Auth::login');
 $routes->get('/auth/register', 'C_Auth::register');
 $routes->get('/user', 'C_User::index');
+$routes->get('/update_qty_cart', 'C_Transaksi::update_qty_cart');
 
 
 /*

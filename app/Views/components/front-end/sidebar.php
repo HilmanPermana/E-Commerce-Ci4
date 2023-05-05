@@ -13,7 +13,7 @@
                  <?php $session = session() ?>
                  <h4>Selamat Datang User!</h4>
                  <?php echo $session->get('username') ?>
-                 <a href="/auth/logout">Logout
+                 <a class="nav-link" href="<?= base_url(); ?>/auth/logout">Logout
                  </a>
 
                  <!-- Sidebar Toggle (Topbar) -->
@@ -58,7 +58,7 @@
                      <div class="topbar-divider d-none d-sm-block"></div>
                      <div class="collapse navbar-collapse" id="navcol-1">
                          <ul class="navbar-nav me-auto">
-                             <li class="nav-item"><a class="nav-link active" href="/">products</a></li>
+                             <li class="nav-item"><a class="nav-link active" href="/product">Home</a></li>
                          </ul>
                          <a class="btn btn-primary rounded-pill" role="button" href="<?= base_url('cart') ?>">
                              <i class="fas fa-shopping-cart"></i>
@@ -76,10 +76,6 @@
 
                      <!-- Nav Item - User Information -->
                      <li class="nav-item dropdown no-arrow">
-                         <a class="nav-link dropdown-toggle" href="/" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">HOME</span>
-
-                         </a>
                          <!-- Dropdown - User Information -->
                          <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                              <a class="dropdown-item" href="#">

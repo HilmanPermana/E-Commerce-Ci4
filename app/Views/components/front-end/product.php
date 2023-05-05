@@ -21,6 +21,7 @@
 
                             <?php if ($value['stok'] > 0) { ?>
                                 <div class="d-grid mx-auto">
+                                    <input type="hidden" name="idkemeja" value="<?= $value['idkemeja'] ?>">
                                     <button type="submit" class="btn btn-primary btn-sm text-capitalize fs-5 fw-semibold link-primary border rounded" id="add-to-cart">
                                         <span class="text-white">Tambah Ke Keranjang</span>
                                     </button>

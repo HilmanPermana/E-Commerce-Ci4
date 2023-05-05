@@ -50,8 +50,6 @@ class C_Barang extends BaseController
         $diskon = $this->request->getPost('diskon');
         $gambar = $this->request->getFile('namafile');
 
-        echo $gambar;
-        echo $nama_barang;
 
         $fileName = $gambar->getRandomName();
 
@@ -63,10 +61,10 @@ class C_Barang extends BaseController
             'stok' => $stok,
             'harga' => $harga,
             'diskon' => $diskon,
-            'gambar' => $fileName
+            'namafile' => $fileName
         ]);
 
-        // return redirect()->to(base_url('/'));
+        return redirect()->to(base_url('/admin/barang'));
     }
 
     public function getBarang()

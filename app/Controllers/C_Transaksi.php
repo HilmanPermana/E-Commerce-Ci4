@@ -21,23 +21,28 @@ class C_Transaksi extends BaseController
     public function add_to_cart()
     {
         // Ambil data produk dari database atau sumber data lainnya
-        $product_data = $this->model_barang->getBarang($this->request->getPost('id_barang'));
+        $product_data = $this->model_barang->getBarang($this->request->getPost('idkemeja'));
+
+
 
         // Buat array untuk disimpan ke dalam session
         $product = [
-            'id' => $product_data['idkemeja'],
+            'id' => isset($product_data['idkemeja']) ? $product_data['idkemeja'] : '',
             'qty' => 1,
-            'price' => $product_data['harga'],
-            'name' => $product_data['namabrg'],
-            'diskon' => $product_data['diskon'],
-            'gambar' => $product_data['namafile']
+            'price' => isset($product_data['harga']) ? $product_data['harga'] : '',
+            'name' => isset($product_data['namabrg']) ? $product_data['namabrg'] : '',
+            'diskon' => isset($product_data['diskon']) ? $product_data['diskon'] : '',
+            'gambar' => isset($product_data['namafile']) ? $product_data['namafile'] : ''
         ];
+
+
 
         // Jika session cart belum ada maka buat cart baru
         if (!session()->has('cart')) {
             session()->set('cart', []);
         }
 
+        //dd(session()->get('cart'));
         $cart = session()->get('cart');
         if (array_key_exists($product['id'], $cart)) {
             $cart[$product['id']]['qty'] += 1;
@@ -46,8 +51,8 @@ class C_Transaksi extends BaseController
         }
         session()->set('cart', $cart);
 
-        // Redirect ke halaman utama
-        return redirect()->to('/');
+        // Redirect ke halaman sebelumnya
+        return redirect()->back();
     }
 
 
@@ -75,69 +80,65 @@ class C_Transaksi extends BaseController
 
         // Buat array untuk disimpan ke dalam session
         $product = [
-            'id' => $product_data['id_barang'],
+            'id' => isset($product_data['idkemeja']) ? $product_data['idkemeja'] : '',
             'qty' => $qty,
-            'price' => $product_data['harga'],
-            'name' => $product_data['nama'],
-            'gambar' => $product_data['gambar']
+            'price' => isset($product_data['harga']) ? $product_data['harga'] : '',
+            'name' => isset($product_data['namabrg']) ? $product_data['namabrg'] : '',
+            'gambar' => isset($product_data['namafile']) ? $product_data['namafile'] : '',
         ];
 
         $cart = session()->get('cart');
-
         // Cek apakah produk sudah ada di dalam cart, jika sudah maka tambahkan qty nya saja, jika belum maka tambahkan produk baru ke cart session
-        if (array_key_exists($product['id'], $cart)) {
-            $cart[$product['id']]['qty'] = $qty;
+        if (array_key_exists($id, $cart)) {
+            $cart[$id]['qty'] = $qty;
         } else {
-            $cart[$product['id']] = $product;
+            $cart[$id] = $product;
         }
 
-        return $this->response->setJSON([
-            'status' => 'success',
-            'message' => 'Qty berhasil diupdate',
-            'data' => $cart
-        ]);
+        session()->set('cart', $cart);
+        return redirect()->to('/cart');
     }
 
     public function checkout()
     {
         $data_checkout = [
-            'namabrg' => $this->request->getPost('namabrg'),
-            'hp' => $this->request->getPost('hp'),
+            'nama' => $this->request->getPost('nama'),
+            'hp' => $this->request->getPost('no_hp'),
             'alamat' => $this->request->getPost('alamat'),
             'kota' => $this->request->getPost('kota'),
             'kecamatan' => $this->request->getPost('kecamatan'),
-            'total_transaksi' =>  $this->request->getPost('total_transaksi'),
+            'total' =>  $this->request->getPost('total_transaksi'),
         ];
 
-
+        // get data cart pada session cart
         $cart = session()->get('cart');
-        $id_barang = [];
+        $idkemeja = [];
         foreach ($cart as $key => $value) {
-            $id_barang[] = $key;
+            $idkemeja[] = $key;
         }
 
-
+        // insert data transaksi_penjualan
         $transaksi = $this->model_transaksi_penjualan->insert($data_checkout);
 
-
+        // insert data ke tabel jual
         $data_jual = [];
         foreach ($cart as $key => $value) {
             $data_jual[] = [
-                'no_transaksi' => $transaksi,
-                'barang_id' => $key,
-                'jumlah_jual' => $value['qty'],
-                'harga_jual' => $value['price'],
+                'idtrans' => $transaksi,
+                'idkemeja' => $key,
+                'jmljual' => $value['qty'],
+                'hargajual' => $value['price'],
             ];
         }
 
-        $produk = $this->model_barang->whereIn('id_barang', $id_barang)->findAll();
+        $produk = $this->model_barang->whereIn('idkemeja', $idkemeja)->findAll();
 
         // jika qty melebihi stok maka tidak bisa checkout
         foreach ($produk as $p) {
-            $cart_qty = $cart[$p['id_barang']]['qty'];
+            $cart_qty = $cart[$p['idkemeja']]['qty'];
             if ($cart_qty > $p['stok']) {
-                $id_barang = $p['id_barang'];
-                $nama_barang = $p['nama'];
+                $idkemeja = $p['idkemeja'];
+                $nama_barang = $p['namabrg'];
                 $stok = $p['stok'];
                 session()->setFlashdata('error', "Stok $nama_barang tidak mencukupi, stok tersisa $stok");
 
@@ -146,14 +147,16 @@ class C_Transaksi extends BaseController
         }
 
         foreach ($produk as $p) {
-            $cart_qty = $cart[$p['id_barang']]['qty'];
+            $cart_qty = $cart[$p['idkemeja']]['qty'];
             $new_stock = $p['stok'] - $cart_qty;
-            $this->model_barang->update($p['id_barang'], ['stok' => $new_stock]);
+            $this->model_barang->update($p['idkemeja'], ['stok' => $new_stock]);
         }
 
 
         $this->model_jual->insert_data_jual($data_jual);
 
-        return redirect()->to('/');
+
+        session()->set('cart', $data_checkout);
+        return redirect()->to('/checkout');
     }
 }

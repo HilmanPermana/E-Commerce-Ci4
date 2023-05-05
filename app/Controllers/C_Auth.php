@@ -66,7 +66,7 @@ class C_Auth extends BaseController
 
             if ($user['password'] != md5($data['password']) . $user['salt']) {
                 session()->setFlashdata('password', 'Password Salah');
-                return redirect()->to('/auth/login');
+                return redirect()->back();
             } else {
                 $sessLogin = [
                     'isLogin' => true,
@@ -74,11 +74,11 @@ class C_Auth extends BaseController
                     'role' => $user['role']
                 ];
                 $this->session->set($sessLogin);
-                return redirect()->to('/product');
+                return redirect()->to(base_url('product'));
             }
         } else {
             session()->setFlashdata('username', 'Username tidak ditemukan');
-            return redirect()->to('/auth/login');
+            return redirect()->back();
         }
     }
 

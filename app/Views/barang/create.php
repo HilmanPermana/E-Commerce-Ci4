@@ -13,7 +13,7 @@
             <form action="<?= base_url('admin/barang') ?>" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama Barang</label>
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Barang">
+                    <input type="text" class="form-control" id="nama" name="namabrg" placeholder="Nama Barang">
                 </div>
                 <div class="mb-3">
                     <label for="stok" class="form-label">Stok</label>
@@ -24,8 +24,12 @@
                     <input type="number" class="form-control" id="harga" name="harga" placeholder="Harga">
                 </div>
                 <div class="mb-3">
+                    <label for="harga" class="form-label">Diskon</label>
+                    <input type="number" class="form-control" id="harga" name="diskon" placeholder="Harga">
+                </div>
+                <div class="mb-3">
                     <label for="gambar" class="form-label">Gambar</label>
-                    <input type="file" class="form-control" id="gambar" name="gambar" placeholder="Gambar">
+                    <input type="file" class="form-control" id="gambar" name="namafile" placeholder="Gambar">
 
                     <div class="image-preview d-none">
                         <img src="" alt="Image Preview" class="image-preview__image img-thumbnail">

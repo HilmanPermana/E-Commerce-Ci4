@@ -138,7 +138,12 @@
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
             </a>
             <hr />
-            <ul class="nav nav-pills flex-column mb-auto">
+            <ul class="nav nav-pills flex-column mb-auto" type="button">
+                <li class="nav-item text-bg-primary mb-2">
+                    <a href="<?= base_url('product') ?>" class="nav-link text-white <?= url_is('admin/barang') || url_is('admin/barang.*') ? 'active' : 'none' ?>" aria-current="page">
+                        Home
+                    </a>
+                </li>
                 <li class="nav-item text-bg-primary">
                     <a href="<?= base_url('admin/barang') ?>" class="nav-link text-white <?= url_is('admin/barang') || url_is('admin/barang.*') ? 'active' : 'none' ?>" aria-current="page">
                         Barang
