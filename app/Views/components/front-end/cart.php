@@ -28,15 +28,14 @@
                                         <picture><img class="img-thumbnail" src="<?= base_url('gambar/' . $item['gambar'] . '') ?>" style="max-height: 144px;max-width: 100px;"></picture>
                                     </td>
                                     <td><strong><span style="color: inherit;"><?= $item['name'] ?>&nbsp;</span></strong></td>
-                                    <td><strong><span style="color: inherit;"><?php echo number_format(((int)$item['price'] - ((int)$item['price'] * (int)$item['diskon'] / 100)), 0, ',', '.') ?>&nbsp;</span></strong></td>
+                                    <td><strong><span style="color: inherit;"><?php echo number_format(($item['price'] - ($item['price'] * $item['diskon'] / 100)), 0, ',', '.') ?>&nbsp;</span></strong></td>
                                     <td class="text-start" colspan="1">
                                         <form action="update_qty_cart" method="post">
                                             <input type="hidden" name="id" value="<?= $item['id'] ?>">
                                             <input type="number" name="qty" value="<?= $item['qty'] ?>">
-
                                         </form>
                                     </td>
-                                    <td><span style="color: inherit;"><?php echo number_format(((int)$item['price'] - ((int)$item['price'] * (int)$item['diskon'] / 100)) * (int)$item['qty']) ?></span></td>
+                                    <td><span style="color: inherit;"><?php echo number_format(($item['price'] - ($item['price'] * $item['diskon'] / 100)) * $item['qty']) ?></span></td>
                                     <td>
                                         <form action="<?= base_url('delete_product_in_cart') ?>" method="post" id="form-delete-product-in-cart">
                                             <input type="hidden" name="id" value="<?= $item['id'] ?>">
@@ -92,6 +91,11 @@
                                 <input type="text" name="kecamatan" class="form-control" id="kecamatan" placeholder="Kecamatan ..." required>
                             </div>
 
+                            <div class="col-md-6">
+                                <label for="kecamatan" class="form-label">Kode Pos</label>
+                                <input type="text" name="kode_pos" class="form-control" id="kode_pos" placeholder="Kode Pos ..." required>
+                            </div>
+
                         </div>
 
                         <hr class="my-4">
@@ -111,7 +115,7 @@
                                             foreach (session('cart') as $item) : ?>
                                                 <tr>
                                                     <td><?= $item['name'] ?></td>
-                                                    <td>Rp<?= number_format(((int)$item['price'] - ((int)$item['price'] * (int)$item['diskon'] / 100)) * (int)$item['qty'], 0, ',', '.') ?>,00,-</td>
+                                                    <td>Rp<?= number_format(($item['price'] - ($item['price'] * $item['diskon'] / 100)) * $item['qty'], 0, ',', '.') ?>,00,-</td>
                                                     <td><?= $item['qty'] ?> x</td>
                                                 </tr>
                                             <?php endforeach; ?>

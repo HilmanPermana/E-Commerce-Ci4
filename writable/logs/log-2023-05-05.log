@@ -614,3 +614,1364 @@ in SYSTEMPATH\Database\BaseConnection.php on line 645.
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:10:50 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(121): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:10:50 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(121): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:11:48 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(121): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:11:48 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(121): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:11:51 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:11:54 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:11:55 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:11:57 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:11:58 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:12:02 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:12:05 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:12:19 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:12:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:12:26 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:12:27 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:12:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:12:32 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:13:00 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:13:14 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:14:23 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:14:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:14:24 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:14:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:14:24 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:14:25 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:16:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:16:20 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:16:21 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:16:21 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:16:22 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:16:22 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:16:39 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:18:25 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:18:30 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:18:38 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:19:39 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:28:23 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:31:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:31:30 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:31:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:31:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:33:01 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(121): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:33:01 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(121): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:33:26 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(121): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:33:26 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(121): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:33:28 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:33:30 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:33:33 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:33:40 --> Cannot access offset of type string on string
+in APPPATH\Views\components\front-end\cart.php on line 28.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('components/front-end/cart', null, true)
+ 4 APPPATH\Views\v_cart.php(5): CodeIgniter\View\View->include('components/front-end/cart')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_cart.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_cart', [], true)
+ 8 APPPATH\Controllers\C_Home.php(26): view('v_cart', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Home->cart()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Home))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:33:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:33:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:34:42 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(121): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:34:42 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(121): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:35:45 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(121): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:35:45 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(121): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:38:32 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:38:32 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:46:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:46:10 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:46:10 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:46:11 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:46:11 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:46:23 --> mysqli_sql_exception: Column 'hp' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:46:23 --> Column 'hp' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:46:33 --> mysqli_sql_exception: Column 'alamat' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:46:33 --> Column 'alamat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:46:54 --> mysqli_sql_exception: Column 'kota' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:46:54 --> Column 'kota' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:51:17 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:51:17 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:52:14 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:52:14 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 18:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:52:46 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:52:46 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:54:49 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#10 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-05-05 18:54:49 --> Column 'nama' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`nama`, `hp`, `alamat`, `kota`, `kecamatan`, `total`) VALUES (:nama:, :hp:, :alamat:, :kota:, :kecamatan:, :total:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\C_Transaksi.php(124): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-05 18:58:41 --> "App\Models\Jual" model class does not specify a Primary Key.
+in SYSTEMPATH\Model.php on line 632.
+ 1 SYSTEMPATH\Model.php(632): CodeIgniter\Exceptions\ModelException::forNoPrimaryKey('App\\Models\\Jual')
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\C_Transaksi.php(124): CodeIgniter\Model->__call('insert_data_transaksi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:59:38 --> mysqli_sql_exception: Column 'alamat' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', NULL, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\E-Commerce-Ci4\app\Models\TransaksiPenjualan.php(22): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): App\Models\TransaksiPenjualan->insert_data_transaksi(Array)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-05-05 18:59:38 --> Column 'alamat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`alamat`, `hp`, `kecamatan`, `kota`, `nama`, `total`)
+VALUES (NULL,NULL,NULL,NULL,NULL,NULL)', null, false)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 3 APPPATH\Models\TransaksiPenjualan.php(22): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 4 APPPATH\Controllers\C_Transaksi.php(124): App\Models\TransaksiPenjualan->insert_data_transaksi([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:59:45 --> mysqli_sql_exception: Column 'alamat' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', NULL, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\E-Commerce-Ci4\app\Models\TransaksiPenjualan.php(22): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): App\Models\TransaksiPenjualan->insert_data_transaksi(Array)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-05-05 18:59:45 --> Column 'alamat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`alamat`, `hp`, `kecamatan`, `kota`, `nama`, `total`)
+VALUES (NULL,NULL,NULL,NULL,NULL,NULL)', null, false)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 3 APPPATH\Models\TransaksiPenjualan.php(22): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 4 APPPATH\Controllers\C_Transaksi.php(124): App\Models\TransaksiPenjualan->insert_data_transaksi([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 18:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 18:59:46 --> mysqli_sql_exception: Column 'alamat' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tr...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', NULL, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\E-Commerce-Ci4\app\Models\TransaksiPenjualan.php(22): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(124): App\Models\TransaksiPenjualan->insert_data_transaksi(Array)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-05-05 18:59:46 --> Column 'alamat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksipjl` (`alamat`, `hp`, `kecamatan`, `kota`, `nama`, `total`)
+VALUES (NULL,NULL,NULL,NULL,NULL,NULL)', null, false)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 3 APPPATH\Models\TransaksiPenjualan.php(22): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 4 APPPATH\Controllers\C_Transaksi.php(124): App\Models\TransaksiPenjualan->insert_data_transaksi([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-05-05 19:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-05 19:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-05 19:00:32 --> mysqli_sql_exception: Column 'idtrans' cannot be null in C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', NULL, false)
+#4 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\E-Commerce-Ci4\app\Models\Jual.php(22): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\E-Commerce-Ci4\app\Controllers\C_Transaksi.php(159): App\Models\Jual->insert_data_jual(Array)
+#7 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+#8 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+#9 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\E-Commerce-Ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\E-Commerce-Ci4\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-05-05 19:00:32 --> Column 'idtrans' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detailjual` (`hargajual`, `idkemeja`, `idtrans`, `jmljual`)
+VALUES (\'200000\',32,NULL,1)', null, false)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 3 APPPATH\Models\Jual.php(22): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 4 APPPATH\Controllers\C_Transaksi.php(159): App\Models\Jual->insert_data_jual([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\C_Transaksi->checkout()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Transaksi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

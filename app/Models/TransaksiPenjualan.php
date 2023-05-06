@@ -16,4 +16,9 @@ class TransaksiPenjualan extends Model
     protected $protectFields    = true;
     protected $allowedFields    = ['nama', 'hp', 'alamat', 'kecamatan', 'kota', 'total'];
     protected $useTimestamps = false;
+
+    public function insert_data_transaksi($data)
+    {
+        $this->db->table($this->table)->insertBatch($data);
+    }
 }

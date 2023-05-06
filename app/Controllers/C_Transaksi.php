@@ -120,6 +120,7 @@ class C_Transaksi extends BaseController
         // insert data transaksi_penjualan
         $transaksi = $this->model_transaksi_penjualan->insert($data_checkout);
 
+
         // insert data ke tabel jual
         $data_jual = [];
         foreach ($cart as $key => $value) {
@@ -138,12 +139,11 @@ class C_Transaksi extends BaseController
             $cart_qty = $cart[$p['idkemeja']]['qty'];
             if ($cart_qty > $p['stok']) {
                 $idkemeja = $p['idkemeja'];
-                $nama_barang = $p['namabrg'];
+                $namabrg = $p['nama'];
                 $stok = $p['stok'];
-                session()->setFlashdata('error', "Stok $nama_barang tidak mencukupi, stok tersisa $stok");
-
-                return redirect()->to('/cart');
+                session()->setFlashdata('error', "Stok $namabrg tidak mencukupi, stok tersisa $stok");
             }
+            return redirect()->to('/cart');
         }
 
         foreach ($produk as $p) {
@@ -155,8 +155,7 @@ class C_Transaksi extends BaseController
 
         $this->model_jual->insert_data_jual($data_jual);
 
-
-        session()->set('cart', $data_checkout);
+        //dd($data_checkout);
         return redirect()->to('/checkout');
     }
 }

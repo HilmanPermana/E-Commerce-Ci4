@@ -25,7 +25,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="harga" class="form-label">Diskon</label>
-                    <input type="number" class="form-control" id="harga" name="diskon" placeholder="Harga">
+                    <input type="number" class="form-control" id="harga" name="diskon" placeholder="Diskon">
                 </div>
                 <div class="mb-3">
                     <label for="gambar" class="form-label">Gambar</label>
